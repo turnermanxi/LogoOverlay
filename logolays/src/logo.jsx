@@ -46,7 +46,7 @@ const ObjModel = ({url, color}) => {
       useFrame(() => {
         if (ref.current) {
           // Rotate the object around the Y-axis
-          ref.current.rotation.y += 0.08; // Adjust the rotation speed as needed
+          ref.current.rotation.y += 0.02; // Adjust the rotation speed as needed
         }
       });
 
