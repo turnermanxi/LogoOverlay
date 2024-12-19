@@ -1,8 +1,25 @@
 .Canvass {
-  height: 80vh;
-  width: 100vw;
+  height: 40vh;
+  width: 80vw;
   position: relative;
-  left: 5rem;
+  left: 15rem;
+  top: 1rem;
+}
+
+.canvas2 {
+  height: 20vh;
+  width: 40vw;
+  position: relative;
+  left: 1rem;
+  top: -15rem;
+}
+
+.canvas3 {
+  height: 20vh;
+  width: 40vw;
+  position: relative;
+  left: 29rem;
+  top: -22.5rem;
 }
 
 div {

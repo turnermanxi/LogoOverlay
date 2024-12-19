@@ -1,4 +1,3 @@
-// ObjModel.js
 import React, { useEffect, useRef } from 'react';
 import { useLoader, useFrame, Canvas } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
@@ -19,17 +18,9 @@ const ObjModel = ({ url }) => {
           child.material = new THREE.MeshStandardMaterial();
 
           const colorMap = {
-            Body10: 'red',
-            Body7: 'red',
-            Body3: '#f85f5f',
-            Body4: '#5badb8',
-            Body2: '#e66815',
-            Body8: '#e66815',
-            Body11: 'green',
-            Body12: '#2c056b',
-            Body6: '#aa9b13',
-            Body5: '#aa9b13',
-            Body9: '#8918a0',
+            Body1: 'pink',
+            Body2: 'pink',
+            Body3: 'pink',
           };
 
           Object.entries(colorMap).forEach(([name, color]) => {
@@ -54,6 +45,7 @@ const ObjModel = ({ url }) => {
       ref.current.rotation.set(...initialRotation);
 
       obj.position.x += .7;
+      obj.position.y += -2;
     }
   }, [obj]);
 
@@ -66,7 +58,7 @@ const ObjModel = ({ url }) => {
   return <primitive ref={ref} object={obj} />;
 };
 
-export function Logoscene() {
+export function Tiktokscene() {
   return (
     <Canvas
       camera={{ position: [0, 0, 10], fov: 50 }}
@@ -82,7 +74,7 @@ export function Logoscene() {
         shadow-mapSize-height={1024}
       />
       <pointLight position={[10, 10, 10]} intensity={1} />
-      <ObjModel url="/SSLogoCentered.obj" />
+      <ObjModel url="/Instagramicon.obj" />
     </Canvas>
   );
 }
