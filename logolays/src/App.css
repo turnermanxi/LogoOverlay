@@ -29,21 +29,7 @@ div {
 .popup {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.popup {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: rgb(105, 191, 197);
   padding: 8px 12px;
   border-radius: 5px;
   top: 100%;
