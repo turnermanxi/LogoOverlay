@@ -1,10 +1,21 @@
 
-import './App.css'
-import { Logoscene } from './logo'
-import { Instagramscene } from './instagramscene'
-import { Tiktokscene } from './tiktokscene'
+import './App.css';
+import { Logoscene } from './logo';
+import { Instagramscene } from './instagramscene';
+import { Tiktokscene } from './tiktokscene';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [visible, setVisible] = useState(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible((prev) => (prev ? null : 'instagram'));
+      setTimeout(() => setVisible(null), 10000);
+    }, 180000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -13,18 +24,22 @@ function App() {
           <Logoscene />
         </a>
       </div>
+      
       <div className="canvas2">
         <a href="https://www.tiktok.com/@_chrislrey">
-        <Instagramscene />
+          <Instagramscene />
         </a>
+        {visible === 'instagram' && <div className="popup">@_chrislrey</div>}
       </div>
+      
       <div className="canvas3">
         <a href="https://www.instagram.com/_chrislrey_/#">
-        <Tiktokscene />
+          <Tiktokscene />
         </a>
+        {visible === 'tiktok' && <div className="popup">@_chrislrey_</div>}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
