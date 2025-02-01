@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .Canvass {
   height: 40vh;
   width: 80vw;
   position: relative;
-  left: 15rem;
+  left: 14rem;
   top: 1rem;
 }
 
@@ -28,15 +31,16 @@ div {
 
 .popup {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(105, 191, 197);
+  
+  color: rgb(115, 223, 223);
   padding: 8px 12px;
   border-radius: 5px;
   top: 100%;
-  left: 50%;
+  left: 21%;
   transform: translateX(-50%) translateY(10px);
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 18px;
+  font-family: 'Pacifico', cursive; /* Cute font */
   margin-top: 5px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -44,5 +48,17 @@ div {
 
 .popup.show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(10px);
+}
+
+.popup1 {
+  top: calc(60% + 10px);
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.popup2 {
+  top: calc(60% + 1px);
+  background-color: rgb(252, 86, 224);
+
 }
