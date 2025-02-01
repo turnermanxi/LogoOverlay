@@ -29,14 +29,14 @@ function App() {
         <a href="https://www.tiktok.com/@_chrislrey">
           <Instagramscene />
         </a>
-        {visible === 'instagram' && <div className="popup">@_chrislrey</div>}
+        {visible === 'instagram' && <div className="popup show">@_chrislrey</div>}
       </div>
       
       <div className="canvas3">
         <a href="https://www.instagram.com/_chrislrey_/#">
           <Tiktokscene />
         </a>
-        {visible === 'tiktok' && <div className="popup">@_chrislrey_</div>}
+        {visible === 'tiktok' && <div className="popup show">@_chrislrey_</div>}
       </div>
     </>
   );
