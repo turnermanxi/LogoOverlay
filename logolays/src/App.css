@@ -4,7 +4,7 @@
 .Canvass {
   height: 40vh;
   width: 80vw;
-  position: relative;
+  position: absolute;
   left: 14rem;
   top: 1rem;
 }
@@ -12,7 +12,7 @@
 .canvas2 {
   height: 20vh;
   width: 40vw;
-  position: relative;
+  position: absolute;
   left: 1rem;
   top: -15rem;
 }
@@ -20,7 +20,7 @@
 .canvas3 {
   height: 20vh;
   width: 40vw;
-  position: relative;
+  position: absolute;
   left: 29rem;
   top: -22.5rem;
 }
@@ -36,7 +36,7 @@ div {
   padding: 8px 12px;
   border-radius: 5px;
   top: 100%;
-  left: 21%;
+  left: 25%;
   transform: translateX(-50%) translateY(10px);
   white-space: nowrap;
   font-size: 18px;
