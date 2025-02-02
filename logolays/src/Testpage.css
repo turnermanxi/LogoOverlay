@@ -1,0 +1,51 @@
+.overlay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+  }
+  
+  .social-card,
+  .schedule-card {
+    position: relative;
+    background-color: #1a202c; /* Dark gray */
+    color: white;
+    padding: 80px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #2d3748; /* Slightly lighter gray */
+    transition: all 0.3s ease;
+    width: 25%;
+    height: 5rem;
+  }
+  
+  .social-card:hover,
+  .schedule-card:hover {
+    border-color: #63b3ed; /* Blue on hover */
+  }
+  
+  .social-card-title,
+  .schedule-card-title {
+    position: absolute; /* Allow absolute positioning within the card */
+    top: -5%; /* Adjust percentage to move the title up */
+    left: 0;
+    right: 0;
+    font-size: 2rem; /* Equivalent to text-xl */
+    font-weight: bold;
+    color: #63e8ed; /* Light blue color */
+    font-family: 'Pacifico', cursive; /* Cute font */
+  }
+  
+  .social-card-text {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    color: #e2e8f0; /* Light gray */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: relative;
+    top: 10%; /* Adjust percentage to move the title up */
+    left: 0;
+    right: 0;
+
+  }
+  

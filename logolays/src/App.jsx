@@ -3,15 +3,17 @@ import { Logoscene } from './logo';
 import { Instagramscene } from './instagramscene';
 import { Tiktokscene } from './tiktokscene';
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import TestPage from './TestPage.jsx';
 
-function App() {
+function Home() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setVisible(true);
-      setTimeout(() => setVisible(false), 5000); // Popups visible for 5 seconds
-    }, 150000); // Popups appear every 15 seconds for testing
+      setTimeout(() => setVisible(false), 5000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, []);
@@ -23,14 +25,14 @@ function App() {
           <Logoscene />
         </a>
       </div>
-      
+
       <div className="canvas2">
         <a href="https://www.tiktok.com/@_chrislrey">
           <Instagramscene />
         </a>
         <div className={`popup popup1 ${visible ? 'show' : ''}`}>@_chrislrey</div>
       </div>
-      
+
       <div className="canvas3">
         <a href="https://www.instagram.com/_chrislrey_/#">
           <Tiktokscene />
@@ -38,6 +40,15 @@ function App() {
         <div className={`popup popup2 ${visible ? 'show' : ''}`}>@_chrislrey_</div>
       </div>
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/testpage" element={<TestPage />} />
+    </Routes>
   );
 }
 
